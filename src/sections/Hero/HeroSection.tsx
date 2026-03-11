@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiDatabase, FiServer, FiZap } from 'react-icons/fi';
 import { SiTypescript } from 'react-icons/si';
@@ -8,7 +9,19 @@ import SectionContainer from '../../components/common/SectionContainer';
 
 const iconMap = [FiZap, FiServer, FiDatabase, SiTypescript];
 
-const HeroSection = () => (
+const arrowHoverVariants = {
+  idle: { x: 0, opacity: 1 },
+  hover: {
+    x: [0, 6, -6, 0],
+    opacity: [1, 0, 0, 1],
+    transition: { duration: 0.5, times: [0, 0.2, 0.2, 1] },
+  },
+};
+
+const HeroSection = () => {
+  const [isCtaHovered, setIsCtaHovered] = useState(false);
+
+  return (
   <SectionContainer id="hero" className="relative overflow-hidden py-20 md:py-28">
     <StaggerChildren
           variants={heroStagger}
@@ -34,11 +47,20 @@ const HeroSection = () => (
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
+                  onHoverStart={() => setIsCtaHovered(true)}
+                  onHoverEnd={() => setIsCtaHovered(false)}
                   className="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
                   aria-label={heroData.primaryCta}
                 >
                   {heroData.primaryCta}
-                  <FiArrowRight className="text-base" />
+                  <motion.span
+                    className="inline-flex"
+                    initial="idle"
+                    animate={isCtaHovered ? 'hover' : 'idle'}
+                    variants={arrowHoverVariants}
+                  >
+                    <FiArrowRight className="text-base" />
+                  </motion.span>
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -101,6 +123,7 @@ const HeroSection = () => (
           </div>
     </StaggerChildren>
   </SectionContainer>
-);
+  );
+};
 
 export default HeroSection;
