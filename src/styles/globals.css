@@ -24,4 +24,45 @@ body {
   font-family: var(--font-sans);
   background-color: rgb(var(--color-surface));
   color: rgb(var(--color-text));
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 
+  Global Background Setup
+  1. Subtle grid pattern using the accent color
+  2. Radial gradient "light" that follows the center-top
+*/
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgb(var(--color-border) / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--color-border) / 0.15) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 90%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: radial-gradient(
+    circle at top center,
+    rgb(var(--color-accent) / 0.08) 0%,
+    rgb(var(--color-accent-soft) / 0.03) 40%,
+    transparent 80%
+  );
+  pointer-events: none;
 }
