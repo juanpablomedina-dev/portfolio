@@ -69,44 +69,49 @@ const ContactCard = ({ item }: { item: ContactItem }) => {
 
 const ContactSection = () => (
   <SectionContainer id="contact" className="pb-24 md:pb-32">
-    <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 items-stretch">
+    <div className="relative overflow-hidden rounded-[2.5rem] border border-border/50 bg-panel/30 px-6 py-16 shadow-xl backdrop-blur-sm md:px-16 md:py-20">
       
-      {/* Left Column: Text & CTA */}
-      <div className="flex h-full flex-col justify-between gap-10">
-        <SectionHeader
-          label="Get In Touch"
-          title={contactData.sectionTitle}
-          lead={contactData.sectionLead}
-        />
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center gap-5 rounded-2xl border border-border/50 bg-panel/30 p-6 backdrop-blur-sm lg:max-w-md"
-        >
-          <div className="relative flex h-4 w-4 shrink-0 items-center justify-center">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
-            <span className="relative inline-flex h-3 w-3 rounded-full bg-accent"></span>
-          </div>
-          <div>
-            <h4 className="text-base font-semibold text-text">Available for new opportunities</h4>
-            <p className="mt-1 text-sm text-muted leading-relaxed">Let's collaborate and build something amazing together. My inbox is open.</p>
-          </div>
-        </motion.div>
-      </div>
+      {/* Subtle ambient glow top */}
+      <div className="pointer-events-none absolute -top-16 left-1/2 h-32 w-2/3 -translate-x-1/2 rounded-full bg-accent/10 blur-[80px]" />
 
-      {/* Right Column: Grid */}
-      <StaggerChildren
-        variants={sectionStagger}
-        viewportTrigger
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
-      >
-        {contactData.items.map((item) => (
-          <ContactCard key={item.id} item={item} />
-        ))}
-      </StaggerChildren>
+      <div className="relative z-10 grid grid-cols-1 gap-12 items-stretch lg:grid-cols-2 lg:gap-20">
+        {/* Left Column: Text & CTA */}
+        <div className="flex h-full flex-col justify-between gap-10">
+          <SectionHeader
+            label="Get In Touch"
+            title={contactData.sectionTitle}
+            lead={contactData.sectionLead}
+          />
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex items-center gap-5 rounded-2xl border border-border/50 bg-panel/30 p-6 backdrop-blur-sm lg:max-w-md"
+          >
+            <div className="relative flex h-4 w-4 shrink-0 items-center justify-center">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex h-3 w-3 rounded-full bg-accent"></span>
+            </div>
+            <div>
+              <h4 className="text-base font-semibold text-text">Available for new opportunities</h4>
+              <p className="mt-1 text-sm leading-relaxed text-muted">Let's collaborate and build something amazing together. My inbox is open.</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Column: Grid */}
+        <StaggerChildren
+          variants={sectionStagger}
+          viewportTrigger
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
+        >
+          {contactData.items.map((item) => (
+            <ContactCard key={item.id} item={item} />
+          ))}
+        </StaggerChildren>
+      </div>
     </div>
   </SectionContainer>
 );
