@@ -19,8 +19,14 @@ const AboutExperienceSection = () => (
         <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-2xl border border-border/70 bg-panel/70">
           <img src={aboutExperienceData.aboutImage} alt={aboutExperienceData.aboutImageAlt} className="h-60 w-full object-cover md:h-72" />
           <div className="space-y-4 p-6">
-            <Pill icon={<FiLayers />}>Lorem Ipsum</Pill>
-            <p className="text-base leading-relaxed text-muted">{aboutExperienceData.aboutBody}</p>
+            <Pill icon={<FiLayers />}>About me</Pill>
+            <div className="flex flex-col gap-4">
+              {aboutExperienceData.aboutBody.map((paragraph, index) => (
+                <p key={index} className="text-sm leading-relaxed text-muted">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </motion.article>
 

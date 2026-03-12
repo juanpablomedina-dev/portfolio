@@ -75,9 +75,9 @@ const SkillsSection = () => {
   return (
     <SectionContainer id="skills" className="pb-20 md:pb-28">
       <div className="space-y-10">
-        <SectionHeader label={skillsData.sectionTitle} title={skillsData.sectionTitle} />
+        <SectionHeader label={skillsData.sectionLabel} title={skillsData.sectionTitle} />
 
-        <div className="flex gap-1 border-b border-border/50" role="tablist" aria-label="Skills category">
+        <div className="flex gap-4 border-b border-border/50 pb-1" role="tablist" aria-label="Skills category">
           <div className="relative">
             <button
               type="button"
@@ -86,14 +86,14 @@ const SkillsSection = () => {
               tabIndex={activeTab === 'hard' ? 0 : -1}
               onClick={() => setActiveTab('hard')}
               onKeyDown={(e) => handleKeyDown(e, 'hard')}
-              className={`rounded-t px-4 py-2.5 text-sm font-medium tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${activeTab === 'hard' ? 'text-accent' : 'text-muted hover:text-text'}`}
+              className={`rounded-t px-6 py-3.5 text-base font-semibold tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${activeTab === 'hard' ? 'text-accent' : 'text-muted hover:text-text'}`}
             >
               Hard Skills
             </button>
             {activeTab === 'hard' && (
               <motion.div
                 layoutId="skills-tab-indicator"
-                className="absolute bottom-0 left-0 right-0 h-px bg-accent"
+                className="absolute -bottom-[5px] left-0 right-0 h-[3px] rounded-t-sm bg-accent"
                 transition={springSoft}
               />
             )}
@@ -106,14 +106,14 @@ const SkillsSection = () => {
               tabIndex={activeTab === 'soft' ? 0 : -1}
               onClick={() => setActiveTab('soft')}
               onKeyDown={(e) => handleKeyDown(e, 'soft')}
-              className={`rounded-t px-4 py-2.5 text-sm font-medium tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${activeTab === 'soft' ? 'text-accent' : 'text-muted hover:text-text'}`}
+              className={`rounded-t px-6 py-3.5 text-base font-semibold tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface ${activeTab === 'soft' ? 'text-accent' : 'text-muted hover:text-text'}`}
             >
               Soft Skills
             </button>
             {activeTab === 'soft' && (
               <motion.div
                 layoutId="skills-tab-indicator"
-                className="absolute bottom-0 left-0 right-0 h-px bg-accent"
+                className="absolute -bottom-[5px] left-0 right-0 h-[3px] rounded-t-sm bg-accent"
                 transition={springSoft}
               />
             )}

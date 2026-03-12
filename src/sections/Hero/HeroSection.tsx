@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiDatabase, FiServer, FiZap } from 'react-icons/fi';
+import { FiArrowRight, FiDatabase, FiServer, FiZap, FiCpu } from 'react-icons/fi';
 import { SiTypescript } from 'react-icons/si';
 import StaggerChildren from '../../components/motion/StaggerChildren';
 import { heroStagger, springSoft, staggerItem } from '../../lib/motion';
 import { heroData } from '../../content/portfolioMock';
 import SectionContainer from '../../components/common/SectionContainer';
 
-const iconMap = [FiZap, FiServer, FiDatabase, SiTypescript];
+const iconMap = [FiZap, FiServer, FiDatabase, SiTypescript, FiCpu];
 
 const arrowHoverVariants = {
   idle: { x: 0, opacity: 1 },

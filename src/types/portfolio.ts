@@ -4,11 +4,11 @@ export type HeroData = { badge: string; title: string; description: string; prim
 
 export type ExperienceItem = { id: string; role: string; period: string; company: string; summary: string; stack: string[]; image: string; imageAlt: string };
 
-export type AboutData = { sectionTitle: string; sectionLead: string; aboutTitle: string; aboutBody: string; aboutImage: string; aboutImageAlt: string; experienceTitle: string; experiences: ExperienceItem[] };
+export type AboutData = { sectionTitle: string; sectionLead: string; aboutTitle: string; aboutBody: string[]; aboutImage: string; aboutImageAlt: string; experienceTitle: string; experiences: ExperienceItem[] };
 
 export type SkillItem = { id: string; title: string; description: string; level: 1 | 2 | 3; icon: string };
 
-export type SkillsData = { sectionTitle: string; hardSkills: SkillItem[]; softSkills: SkillItem[] };
+export type SkillsData = { sectionLabel: string; sectionTitle: string; hardSkills: SkillItem[]; softSkills: SkillItem[] };
 
 export type ContactItem = { id: string; type: 'email' | 'github' | 'linkedin' | 'location'; label: string; value: string; href?: string };
 

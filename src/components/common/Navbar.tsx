@@ -63,7 +63,7 @@ const Navbar = () => {
               className="text-lg font-display font-semibold tracking-tight text-text z-10 hover:text-accent transition-colors duration-300"
               aria-label="Juan Pablo Medina - Top"
             >
-              JM<span className="text-accent">.</span>
+              JPM Dev<span className="text-accent">.</span>
             </a>
 
             {/* Desktop Links */}

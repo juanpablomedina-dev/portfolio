@@ -78,7 +78,7 @@ const ContactSection = () => (
         {/* Left Column: Text & CTA */}
         <div className="flex h-full flex-col justify-between gap-10">
           <SectionHeader
-            label="Get In Touch"
+            label="Contact"
             title={contactData.sectionTitle}
             lead={contactData.sectionLead}
           />
