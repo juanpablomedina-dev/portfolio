@@ -4,6 +4,7 @@ import AboutExperienceSection from './sections/AboutExperience/AboutExperienceSe
 import ContactSection from './sections/Contact/ContactSection';
 import HeroSection from './sections/Hero/HeroSection';
 import SkillsSection from './sections/Skills/SkillsSection';
+import Navbar from './components/common/Navbar';
 
 const lenisOptions = { smoothWheel: true, lerp: 0.08, autoRaf: true };
 
@@ -33,6 +34,8 @@ const App = () => (
   <ReactLenis root options={lenisOptions}>
     <main className="relative min-h-screen text-text selection:bg-accent/30">
       <BackgroundDecorations />
+      
+      <Navbar />
       
       <div className="relative z-10 flex flex-col gap-8 md:gap-16 pb-12">
         <HeroSection />
