@@ -7,22 +7,31 @@ import SectionHeader from '../../components/common/SectionHeader';
 import SectionSubtitle from '../../components/common/SectionSubtitle';
 
 const AboutExperienceSection = () => (
-  <SectionContainer id="experience-about" className="pb-20 md:pb-28">
-    <div className="space-y-10">
+  <SectionContainer id='experience-about' className='pb-20 md:pb-28'>
+    <div className='space-y-10'>
       <SectionHeader
         label={aboutExperienceData.sectionTitle}
         title={aboutExperienceData.aboutTitle}
         lead={aboutExperienceData.sectionLead}
       />
 
-      <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.55 }} className="overflow-hidden rounded-2xl border border-border/70 bg-panel/70">
-          <img src={aboutExperienceData.aboutImage} alt={aboutExperienceData.aboutImageAlt} className="h-60 w-full object-cover md:h-72" />
-          <div className="space-y-4 p-6">
+      <div className='grid gap-8 lg:grid-cols-[0.3fr_0.7fr]'>
+        <motion.article
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.55 }}
+          className='overflow-hidden rounded-2xl border border-border/70 bg-panel/70'>
+          <img
+            src={aboutExperienceData.aboutImage}
+            alt={aboutExperienceData.aboutImageAlt}
+            className='h-60 w-full object-cover md:h-72'
+          />
+          <div className='space-y-4 p-6'>
             <Pill icon={<FiLayers />}>About me</Pill>
-            <div className="flex flex-col gap-4">
+            <div className='flex flex-col gap-4'>
               {aboutExperienceData.aboutBody.map((paragraph, index) => (
-                <p key={index} className="text-sm leading-relaxed text-muted">
+                <p key={index} className='text-base leading-relaxed text-muted'>
                   {paragraph}
                 </p>
               ))}
@@ -30,22 +39,45 @@ const AboutExperienceSection = () => (
           </div>
         </motion.article>
 
-        <div className="space-y-4">
+        <div className='space-y-4'>
           <SectionSubtitle title={aboutExperienceData.experienceTitle} />
-          <div className="grid gap-4">
-            {aboutExperienceData.experiences.map((experience) => (
-              <motion.article key={experience.id} initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.45 }} className="grid gap-4 rounded-2xl border border-border/70 bg-panel/70 p-4 sm:grid-cols-[10rem_1fr]">
-                <img src={experience.image} alt={experience.imageAlt} className="h-36 w-full rounded-xl border border-border/70 object-cover sm:h-full" />
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-3">
+          <div className='grid gap-4'>
+            {aboutExperienceData.experiences.map(experience => (
+              <motion.article
+                key={experience.id}
+                initial={{ opacity: 0, x: 24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45 }}
+                className='grid gap-4 rounded-2xl border border-border/70 bg-panel/70 p-4 sm:grid-cols-[10rem_1fr]'>
+                <img
+                  src={experience.image}
+                  alt={experience.imageAlt}
+                  className='h-36 w-full rounded-xl border border-border/70 object-cover sm:h-full'
+                />
+                <div className='space-y-3'>
+                  <div className='flex flex-wrap items-center gap-3'>
                     <Pill icon={<FiBriefcase />}>{experience.company}</Pill>
                     <Pill icon={<FiClock />}>{experience.period}</Pill>
                   </div>
-                  <h4 className="font-display text-xl leading-tight text-text">{experience.role}</h4>
-                  <p className="text-sm leading-relaxed text-muted">{experience.summary}</p>
-                  <ul className="flex flex-wrap gap-2">
-                    {experience.stack.map((skill) => (
-                      <li key={`${experience.id}-${skill}`} className="rounded-lg border border-border/70 bg-surface/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.08em] text-muted">
+                  <h4 className='font-display text-xl leading-tight text-text'>{experience.role}</h4>
+                  <p className='text-sm leading-relaxed text-muted'>{experience.summary}</p>
+
+                  {experience.achievements && experience.achievements.length > 0 && (
+                    <ul className='flex flex-col gap-1.5 list-disc pl-4'>
+                      {experience.achievements.map((achievement, i) => (
+                        <li key={i} className='text-sm leading-relaxed text-muted marker:text-accent'>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <ul className='flex flex-wrap gap-2 pt-1'>
+                    {experience.stack.map(skill => (
+                      <li
+                        key={`${experience.id}-${skill}`}
+                        className='rounded-lg border border-border/70 bg-surface/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.08em] text-muted'>
                         {skill}
                       </li>
                     ))}

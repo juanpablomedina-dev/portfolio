@@ -4,7 +4,6 @@ import { SiGithub } from 'react-icons/si';
 import StaggerChildren from '../../components/motion/StaggerChildren';
 import { sectionStagger, springSoft, staggerItem } from '../../lib/motion';
 import { contactData } from '../../content/portfolioMock';
-import SectionContainer from '../../components/common/SectionContainer';
 import SectionHeader from '../../components/common/SectionHeader';
 import type { ContactItem } from '../../types/portfolio';
 
@@ -68,12 +67,11 @@ const ContactCard = ({ item }: { item: ContactItem }) => {
 };
 
 const ContactSection = () => (
-  <SectionContainer id="contact" className="pb-24 md:pb-32">
-    <div className="relative overflow-hidden rounded-[2.5rem] border border-border/50 bg-panel/30 px-6 py-16 shadow-xl backdrop-blur-sm md:px-16 md:py-20">
-      
-      {/* Subtle ambient glow top */}
-      <div className="pointer-events-none absolute -top-16 left-1/2 h-32 w-2/3 -translate-x-1/2 rounded-full bg-accent/10 blur-[80px]" />
+  <section id="contact" className="relative mt-12 overflow-hidden border-t border-border/50 bg-panel/30 pb-24 pt-16 shadow-xl backdrop-blur-sm md:pt-20 md:pb-32">
+    {/* Subtle ambient glow top */}
+    <div className="pointer-events-none absolute -top-16 left-1/2 h-32 w-2/3 -translate-x-1/2 rounded-full bg-accent/10 blur-[80px]" />
 
+    <div className="mx-auto max-w-6xl px-6 md:px-10">
       <div className="relative z-10 grid grid-cols-1 gap-12 items-stretch lg:grid-cols-2 lg:gap-20">
         {/* Left Column: Text & CTA */}
         <div className="flex h-full flex-col justify-between gap-10">
@@ -113,7 +111,7 @@ const ContactSection = () => (
         </StaggerChildren>
       </div>
     </div>
-  </SectionContainer>
+  </section>
 );
 
 export default ContactSection;
