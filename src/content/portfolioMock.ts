@@ -37,6 +37,7 @@ export const aboutExperienceData: AboutData = {
       role: 'Fullstack Developer',
       period: '2023 - Present',
       company: 'Litebox',
+      companyUrl: 'https://litebox.ai/',
       summary:
         'Participated or lead several projects of multiple types and challenges within large multi-role teams with structured workflows.',
       achievements: [
@@ -47,7 +48,7 @@ export const aboutExperienceData: AboutData = {
       ],
       stack: [
         'NextJS & Vercel',
-        'Pixel-perfect UI/CSS',
+        'Pixel-perfect UI',
         'AI Integration',
         'Motion libraries',
         'Optimization',
@@ -62,6 +63,7 @@ export const aboutExperienceData: AboutData = {
       role: 'Web & Mobile Dev',
       period: '2020 - 2023',
       company: 'Sana',
+      companyUrl: 'https://www.linkedin.com/company/sana-digital-clinic/',
       summary:
         'Built a fully operational online-consultations platform from scratch in a dynamic working environment.',
       achievements: [
@@ -269,8 +271,8 @@ export const contactData: ContactData = {
       id: 'contact-linkedin',
       type: 'linkedin',
       label: 'LinkedIn',
-      value: 'juan-pablo-medina-249799196/',
-      href: 'https://www.linkedin.com/in/juan-pablo-medina-249799196/',
+      value: 'jpmdev',
+      href: 'https://www.linkedin.com/in/jpmdev',
     },
     {
       id: 'contact-github',

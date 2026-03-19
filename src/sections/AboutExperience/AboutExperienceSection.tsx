@@ -59,7 +59,20 @@ const AboutExperienceSection = () => (
                   <div className='flex flex-wrap items-start justify-between gap-3'>
                     <h4 className='font-display text-xl leading-tight text-text font-semibold'>
                       {experience.role}{' '}
-                      <span className='ml-[3px] text-accent font-medium'>@ {experience.company}</span>
+                      <span className='ml-[3px] text-accent font-medium'>
+                        @{' '}
+                        {experience.companyUrl ? (
+                          <a
+                            href={experience.companyUrl}
+                            target='_blank'
+                            rel='noreferrer'
+                            className='underline decoration-accent/40 underline-offset-2 transition-colors hover:decoration-accent hover:text-accentSoft'>
+                            {experience.company}
+                          </a>
+                        ) : (
+                          experience.company
+                        )}
+                      </span>
                     </h4>
                     <Pill icon={<FiClock />}>{experience.period}</Pill>
                   </div>
@@ -79,7 +92,7 @@ const AboutExperienceSection = () => (
                     {experience.stack.map(skill => (
                       <li
                         key={`${experience.id}-${skill}`}
-                        className='rounded-lg border border-border/70 bg-surface/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.08em] text-muted'>
+                        className='rounded-lg border border-border/70 bg-surface/70 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.08em] text-muted'>
                         {skill}
                       </li>
                     ))}

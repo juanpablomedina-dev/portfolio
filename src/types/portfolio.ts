@@ -2,7 +2,7 @@ export type HeroStat = { id: string; label: string; value: string };
 
 export type HeroData = { badge: string; title: string; description: string; primaryCta: string; secondaryCta: string; stats: HeroStat[]; tags: string[]; image: string; imageAlt: string };
 
-export type ExperienceItem = { id: string; role: string; period: string; company: string; summary: string; achievements?: string[]; stack: string[]; image: string; imageAlt: string };
+export type ExperienceItem = { id: string; role: string; period: string; company: string; companyUrl?: string; summary: string; achievements?: string[]; stack: string[]; image: string; imageAlt: string };
 
 export type AboutData = { sectionTitle: string; sectionLead: string; aboutTitle: string; aboutBody: string[]; aboutImage: string; aboutImageAlt: string; experienceTitle: string; experiences: ExperienceItem[] };
 
