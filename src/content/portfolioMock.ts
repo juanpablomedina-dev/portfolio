@@ -8,7 +8,7 @@ export const heroData: HeroData = {
   primaryCta: 'Get in touch',
   secondaryCta: 'View experience',
   tags: ['Product-focused', 'Self organized', 'AI solver', 'TS oriented'],
-  image: '/placeholders/hero-media-default.svg',
+  image: './placeholders/hero-media-default.svg',
   imageAlt: 'A decoration of circles and lines flowing',
   stats: [
     { id: 'experience', label: 'Years of experience', value: '5+' },
@@ -28,7 +28,7 @@ export const aboutExperienceData: AboutData = {
     'Now I work with several high profile clients with clear structures and organized workflows within large teams and complex systems.',
     'I’ve learned to prioritize productivity without compromising quality, always seeking the most efficient path and avoiding unnecessary detours.',
   ],
-  aboutImage: '/placeholders/about-profile-default.svg',
+  aboutImage: './placeholders/about-profile-default.svg',
   aboutImageAlt: 'Illustration of an user icon and text',
   experienceTitle: 'My Experience',
   experiences: [
@@ -55,7 +55,7 @@ export const aboutExperienceData: AboutData = {
         'Automation tools',
         'AI-Synergy Development',
       ],
-      image: '/litebox.png',
+      image: './litebox.png',
       imageAlt: 'Litebox logo',
     },
     {
@@ -73,7 +73,7 @@ export const aboutExperienceData: AboutData = {
         'Integrated native videocalls for digital consultations.',
       ],
       stack: ['React', 'UI/CSS Tailwind', 'React Native', 'Express', 'MySQL', 'AWS'],
-      image: '/sana.png',
+      image: './sana.png',
       imageAlt: 'Sana Digital logo',
     },
     {
@@ -87,7 +87,7 @@ export const aboutExperienceData: AboutData = {
         'Developed a desktop inventory management system.',
       ],
       stack: ['React', 'HTML', 'CSS', 'JS'],
-      image: '/placeholders/experience-card-default.svg',
+      image: './placeholders/experience-card-default.svg',
       imageAlt: 'Illustration of a card with text placeholder',
     },
   ],
