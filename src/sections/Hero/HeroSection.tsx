@@ -21,6 +21,16 @@ const arrowHoverVariants = {
 const HeroSection = () => {
   const [isCtaHovered, setIsCtaHovered] = useState(false);
 
+  const handleScrollTo = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      const offset = 100; // Offset spacing for fixed navbar
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <SectionContainer id="hero" className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28">
       <StaggerChildren
@@ -58,6 +68,7 @@ const HeroSection = () => {
             {/* CTAs */}
             <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-4">
               <motion.button
+                onClick={(e) => handleScrollTo(e, '#contact')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onHoverStart={() => setIsCtaHovered(true)}
@@ -80,6 +91,7 @@ const HeroSection = () => {
               </motion.button>
               
               <motion.button
+                onClick={(e) => handleScrollTo(e, '#experience-about')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center gap-2 rounded-2xl border border-border/80 bg-panel/50 px-6 py-3.5 text-sm font-semibold text-text backdrop-blur-md transition hover:bg-panel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
