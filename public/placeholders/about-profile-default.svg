@@ -11,5 +11,5 @@
   <rect x="250" y="510" width="400" height="220" rx="26" fill="white" fill-opacity="0.28"/>
   <rect x="295" y="560" width="310" height="14" rx="7" fill="white" fill-opacity="0.55"/>
   <rect x="295" y="605" width="240" height="14" rx="7" fill="white" fill-opacity="0.42"/>
-  <text x="450" y="830" text-anchor="middle" fill="white" fill-opacity="0.78" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">ABOUT PLACEHOLDER</text>
+  <text x="450" y="830" text-anchor="middle" fill="white" fill-opacity="0.78" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700"></text>
 </svg>

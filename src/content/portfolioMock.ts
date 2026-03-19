@@ -53,8 +53,8 @@ export const aboutExperienceData: AboutData = {
         'n8n & trigger.dev',
         'Supabase',
       ],
-      image: '/placeholders/experience-card-default.svg',
-      imageAlt: 'Lorem ipsum experience placeholder one',
+      image: '/litebox.png',
+      imageAlt: 'Litebox logo',
     },
     {
       id: 'exp-2',
@@ -70,8 +70,8 @@ export const aboutExperienceData: AboutData = {
         'Integrated native videocalls for digital consultations.',
       ],
       stack: ['React', 'React Native', 'Express', 'MySQL', 'AWS'],
-      image: '/placeholders/experience-card-default.svg',
-      imageAlt: 'Lorem ipsum experience placeholder three',
+      image: '/sana.png',
+      imageAlt: 'Sana Digital logo',
     },
     {
       id: 'exp-3',
