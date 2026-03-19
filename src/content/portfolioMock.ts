@@ -29,7 +29,7 @@ export const aboutExperienceData: AboutData = {
     'I’ve learned to prioritize productivity without compromising quality, always seeking the most efficient path and avoiding unnecessary detours.',
   ],
   aboutImage: '/placeholders/about-profile-default.svg',
-  aboutImageAlt: 'Lorem ipsum profile placeholder',
+  aboutImageAlt: 'Illustration of an user icon and text',
   experienceTitle: 'My Experience',
   experiences: [
     {
@@ -88,7 +88,7 @@ export const aboutExperienceData: AboutData = {
       ],
       stack: ['React', 'HTML', 'CSS', 'JS'],
       image: '/placeholders/experience-card-default.svg',
-      imageAlt: 'Lorem ipsum experience placeholder two',
+      imageAlt: 'Illustration of a card with text placeholder',
     },
   ],
 };
