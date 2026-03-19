@@ -53,7 +53,7 @@ const AboutExperienceSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: isMobile ? 0.05 : 0.2 }}
                   transition={{ duration: 0.45 }}
-                  className='grid gap-4 rounded-2xl border border-border/70 bg-panel/70 p-4 sm:grid-cols-[10rem_1fr]'>
+                  className='grid gap-4 py-8 rounded-2xl border border-border/70 bg-panel/70 p-4 sm:grid-cols-[10rem_1fr]'>
                   <img
                     src={experience.image}
                     alt={experience.imageAlt}

@@ -13,7 +13,7 @@ export const heroData: HeroData = {
   stats: [
     { id: 'experience', label: 'Years of experience', value: '5+' },
     { id: 'projects', label: 'Projects Worked', value: '50+' },
-    { id: 'languages', label: 'Proficient Technologies', value: '20+' },
+    { id: 'technologies', label: 'Proficient Technologies', value: '20+' },
     { id: 'languages', label: 'Languages Spoken', value: 'En & Es' },
   ],
 };
