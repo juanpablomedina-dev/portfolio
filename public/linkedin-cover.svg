@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <radialGradient id="bg" cx="100%" cy="50%" r="150%" fx="100%" fy="50%">
+      <stop offset="0%" stop-color="#1e2229"/>
+      <stop offset="100%" stop-color="#0a0a0c"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#a3a3a3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="60" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  
+  <!-- Abstract Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.02"/>
+  </pattern>
+  <rect width="1584" height="396" fill="url(#grid)"/>
+
+  <!-- Glowing Accent Orb on the right -->
+  <circle cx="1400" cy="198" r="300" fill="#00e5ff" opacity="0.10" filter="url(#glow)" />
+  
+  <!-- Logo Icon on the far right -->
+  <g transform="translate(1360, 110) scale(1.6)">
+    <rect width="100" height="100" rx="24" fill="#131313" stroke="#252528" stroke-width="2"/>
+    <path d="M35 30 L15 50 L35 70" fill="none" stroke="#00e5ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M65 30 L85 50 L65 70" fill="none" stroke="#00e5ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M58 25 L42 75" fill="none" stroke="#a3a3a3" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <!-- Text aligned to right, leaving left side free for avatar -->
+  <!-- We want the text to end around 1300 X so it doesn't overlap the logo -->
+  <g text-anchor="end">
+    <!-- Title Text -->
+    <text x="1300" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="68" font-weight="800" fill="url(#textGrad)" letter-spacing="-1.5">Juan Pablo Medina</text>
+    
+    <!-- Subtitle -->
+    <text x="1300" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="600" fill="#00e5ff" letter-spacing="3" text-transform="uppercase">Fullstack Developer</text>
+    
+    <!-- Tagline or tech stack -->
+    <text x="1300" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="400" fill="#888888" letter-spacing="1">Next.js • Motion &amp; UI • APIs • Integrations • Workflows &amp; Automations • Responsible AI-Synergy</text>
+  </g>
+  
+  <!-- subtle abstract shape on the bottom left (behind where the avatar goes) -->
+  <path d="M 0 396 Q 200 200 400 396 Z" fill="#00e5ff" opacity="0.02" />
+</svg>

@@ -7,9 +7,9 @@ export const heroData: HeroData = {
     'Web systems developer focused on production with scalable technology. Always visible, proactive and independent. New challenges welcome.',
   primaryCta: 'Get in touch',
   secondaryCta: 'View experience',
-  tags: ['Product-focused', 'Self organized', 'DB manager', 'TS addict', 'AI solver'],
+  tags: ['Product-focused', 'Self organized', 'AI solver', 'TS oriented'],
   image: '/placeholders/hero-media-default.svg',
-  imageAlt: 'Lorem ipsum hero media placeholder',
+  imageAlt: 'A decoration of circles and lines flowing',
   stats: [
     { id: 'experience', label: 'Years of experience', value: '5+' },
     { id: 'projects', label: 'Projects Worked', value: '50+' },
