@@ -19,7 +19,7 @@
 
 <br />
 
-## ⚡ Tech Stack
+## Tech Stack
 
 - **Core**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) with a Custom Design System & Tokens
@@ -29,14 +29,14 @@
 - **Infrastructure**: CI/CD Deployments via GitHub Actions
 - **AI-synergy Editor**: [Google Antigravity](https://antigravity.google/); modern and efficient.
 
-## ✨ Key Features
+## Key Features
 
-- **🚀 Performant & Optimized:** High Lighthouse scoring achieved. Optimized First Contentful Paint (FCP) utilizing `preconnect` for typography, lazy rendering, and semantic HTML tags.
-- **🪄 Immersive UI/UX:** Features a custom abstract glowing SVG header, magnetic micro-interactions, holographic text hover effects, and responsive scroll thresholds synced to the user's viewport.
-- **🧩 Data-Driven & Modular Architecture:** Content is strictly decoupled from the UI. Application text and media data are modularized into distinct domain files within `src/content/` (`hero.ts`, `aboutExperience.ts`, `skills.ts`, `contact.ts`) to ensure a maintainable single-source-of-truth.
-- **♿ Accessible (A11y):** Keyboard navigable interface with tabs, an `Escape`-dismissible mobile menu, proper ARIA labels, and responsive layout scaling to ensure usability for all.
+- **Performance**: High Lighthouse scores with optimized scores. Uses preconnect for assets, lazy loading, and semantic HTML for a fast, efficient experience.
+- **Modern Interactivity**: Polished UI with custom SVG backgrounds, magnetic interactions, and holographic hover effects. Scroll thresholds and animations are fine-tuned for a seamless feel.
+- **Modular Data Architecture**: Content is decoupled from UI logic. Project data is organized into domain-specific modules in `src/content/` for better scalability and maintenance.
+- **Native Accessibility**: Built with A11y best practices, including full keyboard navigation, ARIA standards, and responsive scaling to ensure usability for all visitors.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```text
 src/
@@ -52,7 +52,7 @@ src/
 └── types/        # TypeScript Interfaces & global definitions
 ```
 
-## 🚀 Getting Started
+## 💻 Run it locally
 
 To run this project locally, ensure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
 
