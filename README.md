@@ -3,7 +3,7 @@
   <p>A fully responsive, optimized and elegant personal portfolio built with modern Web Technologies.</p>
   
   <p>
-    <a href="https://juanpablomedina-dev.github.io/portfolio/"><b>Live Demo</b></a> •
+    <a href="https://jpm-fdev.github.io/portfolio/"><b>Live Demo</b></a> •
     <a href="https://www.linkedin.com/in/jpmdev"><b>LinkedIn</b></a> •
     <a href="mailto:medinajp95@gmail.com"><b>Email</b></a>
   </p>
