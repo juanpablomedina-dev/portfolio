@@ -52,7 +52,7 @@ src/
 └── types/        # TypeScript Interfaces & global definitions
 ```
 
-## 💻 Run it locally
+## Run it locally
 
 To run this project locally, ensure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
 
