@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Juan Pablo Medina — Fullstack Developer</h1>
-  <p>An elegant, high-performance, and responsive personal portfolio built with modern Web Technologies.</p>
+  <p>A fully responsive, optimized and elegant personal portfolio built with modern Web Technologies.</p>
   
   <p>
     <a href="https://juanpablomedina-dev.github.io/portfolio/"><b>Live Demo</b></a> •
@@ -27,13 +27,14 @@
 - **Scroll Handling**: [Lenis](https://lenis.studiofreight.com/) for smooth, accessible scroll experiences
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 - **Infrastructure**: CI/CD Deployments via GitHub Actions
+- **AI-synergy Editor**: [Google Antigravity](https://antigravity.google/); modern and efficient.
 
 ## ✨ Key Features
 
-- **🚀 Performant & Optimized:** Carefully optimized First Contentful Paint (FCP) utilizing `preconnect` for typography, lazy rendering, and semantic HTML tags.
-- **♿ Accessible (A11y):** Keyboard navigable interface with an `Escape`-dismissible mobile menu, proper ARIA labels, and responsive layout scaling to ensure usability for all.
+- **🚀 Performant & Optimized:** High Lighthouse scoring achieved. Optimized First Contentful Paint (FCP) utilizing `preconnect` for typography, lazy rendering, and semantic HTML tags.
 - **🪄 Immersive UI/UX:** Features a custom abstract glowing SVG header, magnetic micro-interactions, holographic text hover effects, and responsive scroll thresholds synced to the user's viewport.
 - **🧩 Data-Driven & Modular Architecture:** Content is strictly decoupled from the UI. Application text and media data are modularized into distinct domain files within `src/content/` (`hero.ts`, `aboutExperience.ts`, `skills.ts`, `contact.ts`) to ensure a maintainable single-source-of-truth.
+- **♿ Accessible (A11y):** Keyboard navigable interface with tabs, an `Escape`-dismissible mobile menu, proper ARIA labels, and responsive layout scaling to ensure usability for all.
 
 ## 🏗️ Architecture Overview
 
